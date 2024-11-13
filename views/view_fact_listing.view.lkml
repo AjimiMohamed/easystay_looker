@@ -52,27 +52,27 @@ view: view_fact_listing {
   dimension: distance_from_center {
     type: number
     sql: ${TABLE}.distance_from_center ;;
-    value_format: "#,##0.0 km"
+    value_format: "#,##0.0"
   }
   measure: avg_distance_from_center {
     type: average
     sql: ${TABLE}.distance_from_center ;;
     label: "Average Distance from City Center"
-    value_format: "#,##0.0 km"
+    value_format: "#,##0.0"
   }
 
   measure: avg_metro_distance {
     type: average
     sql: ${TABLE}.metro_distance ;;
     label: "Average Distance from Metro Station"
-    value_format: "#,##0.0 km"
+    value_format: "#,##0.0"
   }
 
   dimension: metro_distance {
     type: number
     sql: ${TABLE}.metro_distance ;;
     label: "Distance from Metro Station"
-    value_format: "#,##0.0 km"
+    value_format: "#,##0.0"
   }
 
   dimension: form {
