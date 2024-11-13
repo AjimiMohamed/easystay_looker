@@ -15,6 +15,10 @@ view: view_fact_listing {
     sql: ${TABLE}.attr_index ;;
   }
 
+  dimension: gropuper {
+    sql: 1 ;;
+  }
+
   dimension: attr_index_norm {
     type: number
     sql: ${TABLE}.attr_index_norm ;;
@@ -23,7 +27,11 @@ view: view_fact_listing {
     type: average
     sql: ${TABLE}.attr_index_norm ;;
   }
-  measure: bedrooms {
+  measure: bedrooms_num {
+    type: number
+    sql: ${TABLE}.bedrooms ;;
+  }
+  dimension: bedrooms {
     type: number
     sql: ${TABLE}.bedrooms ;;
   }
@@ -109,7 +117,7 @@ view: view_fact_listing {
     type: number
     sql: ${TABLE}.periodID ;;
   }
-  measure: person_capacity {
+  dimension: person_capacity {
     type: number
     sql: ${TABLE}.person_capacity ;;
   }
