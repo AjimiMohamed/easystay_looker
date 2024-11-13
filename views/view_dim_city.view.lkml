@@ -8,6 +8,7 @@ view: view_dim_city {
   dimension: name {
     type: string
     sql: ${TABLE}.name ;;
+    suggest_persist_for: "0 seconds"
   }
   measure: count {
     type: count
