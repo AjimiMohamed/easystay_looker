@@ -142,6 +142,14 @@ view: view_fact_listing {
     type: number
     sql: ${TABLE}.rest_index_norm ;;
   }
+  measure: avg_rest_index {
+    type: average
+    sql: ${TABLE}.rest_index ;;
+  }
+  measure: avg_rest_index_norm {
+    type: average
+    sql: ${TABLE}.rest_index_norm ;;
+  }
   dimension: row_hash {
     primary_key: yes
     type: string
